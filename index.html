@@ -7,6 +7,7 @@
 	</head>
 	<body>
 		<h2 class="food" style="font-family: sans-serif;"></h2>
+		<h3>refresh for a new combination...</h3>
 		<script>
 			var foods = [
 				['corn tortilla', 'flour tortilla', 'lettuce wrapped'],
@@ -26,7 +27,7 @@
 			var food = [];
 			for (var i = 0; i < foods.length; i += 1) {
 				if (i < 2 || Math.random() > 0.5) {
-					if (foods[i][0] === 'deep fried' && food.indexOf('lettuce wrapped') !== -1) {
+					if (foods[i][0] === 'deep fried' && (food.indexOf('lettuce wrapped') !== -1 || food.indexOf('lettuce') !== -1)) {
 					} else {
 						food.push(foods[i][Math.floor(Math.random() * foods[i].length)]);
 					}
