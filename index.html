@@ -27,15 +27,11 @@
 				['fajitas'],
 				['onion', 'green onion'],
 				['red sauce', 'green sauce'],
-				['deep fried'],
 			];
 			var food = [];
 			for (var i = 0; i < foods.length; i += 1) {
 				if (i < 2 || Math.random() > 0.5) {
-					if (foods[i][0] === 'deep fried' && (food.indexOf('lettuce wrapped') !== -1 || food.indexOf('lettuce') !== -1)) {
-					} else {
-						food.push(foods[i][Math.floor(Math.random() * foods[i].length)]);
-					}
+					food.push(foods[i][Math.floor(Math.random() * foods[i].length)]);
 				}
 			}
 			document.querySelector('.food').innerHTML = food.join(', ');
